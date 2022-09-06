@@ -12,48 +12,59 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1>Alquiler de Cabañas</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-1 align-self-center">
+                <h1>Cabañas</h1>
             </div>
         </div>
+        <br>
         <div class="row justify-content-center">
-            <div class="col-4 align-self-center">
+
+            <div class="col-2 align-self-center">
                 <label for="ID">
                     ID
                 </label>
                 <input type="number" id="id" name="id" placeholder="#" class="form-control" readonly>
             </div>
-            <div class="col-4 align-self-center">
+
+            <div class="col-2 align-self-center">
                 <label for="brand">
                     Marca
                 </label>
                 <input type="text" id="brand" name="brand" placeholder="Descripcion" class="form-control">
             </div>
-            <div class="col-4 align-self-center">
+
+            <div class="col-2 align-self-center">
                 <label for="rooms">
                     Cuartos
                 </label>
                 <input type="number" id="rooms" name="Rooms" placeholder="Numero de cuartos" class="form-control">
             </div>
-            <div class="col-4 align-self-center">
+
+            <div class="col-2 align-self-center">
                 <label for="category_id">
                     Categoria
                 </label>
-                <input type="number" id="category_id" name="category_id" placeholder="category_id" class="form-control">
+                <input type="number" id="category_id" name="category_id" placeholder="ID Categoria" class="form-control">
             </div>
-            <div class="col-4 align-self-center">
+
+            <div class="col-2 align-self-center">
                 <label for="name">
                     Nombre
                 </label>
                 <input type="text" id="name" name="name" placeholder="Nombre" class="form-control">
             </div>
+
         </div>
         <br>
-        <div class="col-4">
-            <button type="button" class="btn btn-success" onclick="crearCabin()">Registrar</button>
-            <button type="button" class="btn btn-primary" onclick="LimpiarCeldas()">Limpiar</button>
+        <div class="row justify-content-center">
+            <div class="col-2 align-self-center">
+                <button type="button" class="btn btn-success" onclick="crearCabin()">Registrar Cabaña</button>
+                <button type="button" class="btn btn-primary" onclick="LimpiarCeldas()">Limpiar</button>
+            </div> 
         </div>
+
         <br>
         <div class="row">
             <table id="cabin" class="table table-striped table-hover table-bordered">
@@ -73,6 +84,127 @@
         </div>
 
     </div>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+            <div class="col-1 align-self-center">
+                <h1>Clientes</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+
+            <div class="col-2 align-self-center">
+                <label for="ID">
+                    ID
+                </label>
+                <input type="number" id="id_Cliente" name="id_Cliente" placeholder="#" class="form-control" readonly>
+            </div>
+
+            <div class="col-2 align-self-center">
+                <label for="name">
+                    Nombre
+                </label>
+                <input type="text" id="name_Cliente" name="name_Cliente" placeholder="Nombre" class="form-control">
+            </div>
+
+            <div class="col-2 align-self-center">
+                <label for="email">
+                    Email
+                </label>
+                <input type="text" id="email_Cliente" name="email_Cliente" placeholder="Email" class="form-control">
+            </div>
+
+            <div class="col-2 align-self-center">
+                <label for="age">
+                    Edad
+                </label>
+                <input type="number" id="age_Cliente" name="age_Cliente" placeholder="Edad" class="form-control">
+            </div>
+
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-2 align-self-center">
+                <button type="button" class="btn btn-success" onclick="crearCliente()">Registrar Cliente</button>
+                <button type="button" class="btn btn-primary" onclick="LimpiarCliente()">Limpiar</button>
+            </div> 
+        </div>
+
+        <br>
+        <div class="row">
+            <table id="cabin" class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla_Cliente">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+            <div class="col-1 align-self-center">
+                <h1>Mensajes</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+
+            <div class="col-2 align-self-center">
+                <label for="ID">
+                    ID
+                </label>
+                <input type="number" id="id_Message" name="id_Message" placeholder="#" class="form-control" readonly>
+            </div>
+
+            <div class="col-2 align-self-center">
+                <label for="Message">
+                    Mensaje
+                </label>
+                <input type="text" id="message" name="message" placeholder="Mensaje" class="form-control">
+            </div>
+
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-2 align-self-center">
+                <button type="button" class="btn btn-success" onclick="crearMensaje()">Registrar Mensaje</button>
+                <button type="button" class="btn btn-primary" onclick="LimpiarMensaje()">Limpiar</button>
+            </div> 
+        </div>
+
+        <br>
+        <div class="row">
+            <table id="cabin" class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla_Mensaje">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
